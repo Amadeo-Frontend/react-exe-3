@@ -12,10 +12,10 @@ incluída na lista.
 
 O formulário deve ter os elementos:
 
-○ campo de texto
-○ caixa de seleção
-○ radio button
-○ checkbox
-○ Botão de submit
+○ campo de texto<br>
+○ caixa de seleção<br>
+○ radio button<br>
+○ checkbox<br>
+○ Botão de submit<br>
 
 ##

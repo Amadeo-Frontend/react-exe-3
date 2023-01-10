@@ -4,9 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="img/LogoMakr-7MbNN9.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./style.css">
+
     <title>Formulário-exercício 3</title>
 </head>
 <body>
+
+<div class="container">
     
+    <form>
+    <label for="text-field" class="text-field1">Campo de texto:</label>
+    <input type="text" id="text-field" name="text-field">
+
+    <label for="select-field" class="select-field1">Caixa de seleção:</label>
+    <select name="select-field" id="select-field">
+        <option value="option1">Opção 1</option>
+        <option value="option2">Opção 2</option>
+        <option value="option3">Opção 3</option>
+    </select>
+
+    <label class="radio-btn">Radio button:</label>
+    <input type="radio" name="radios" id="radio1" value="radio1">
+    <label for="radio1">Opção 1</label>
+    <input type="radio" name="radios" id="radio2" value="radio2">
+    <label for="radio2">Opção 2</label>
+    <input type="radio" name="radios" id="radio3" value="radio3">
+    <label for="radio3">Opção 3</label>
+
+    <label>Checkbox:</label>
+
+    <input type="checkbox" name="checkbox1" id="checkbox1" value="check1">
+    <label for="checkbox1">Opção 1</label>
+    <input type="checkbox" name="checkbox2" id="checkbox2" value="check2">
+    <label for="checkbox2">Opção 2</label>
+    <input type="checkbox" name="checkbox3" id="checkbox3" value="check3">
+    <label for="checkbox3">Opção 3</label>
+
+    <button>Enviar<span class="spinner"></span></button>
+
+
+</form>
+
+<table id="responses-table">
+    <tr>
+      <th>Campo de texto</th>
+      <th>Caixa de seleção</th>
+      <th>Radio button</th>
+      <th>Checkbox</th>
+    </tr>
+  </table>
+</div>
+
+
+
+    <script src="./scripts.js"></script>
 </body>
 </html>
