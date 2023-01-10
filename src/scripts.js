@@ -1,38 +1,4 @@
 
-const form = document.querySelector('form');
-const submitButton = form.querySelector('input[type="submit"]');
-const loadingIndicator = document.querySelector('#loading-indicator');
-
-form.addEventListener('submit', e => {
-    e.preventDefault();
-
-    submitButton.getElementsByClassName.display = 'none';
-    loadingIndicator.getElementsByClassName.display = 'block';
-
-    setTimeout(() => {
-        loadingIndicator.getElementsByClassName.display = 'none';
-        submitButton.getElementsByClassName.display = 'block';
-
-        const textField = form.querySelector('#text-field').value;
-        const selectField = form.querySelector('#select-field').value;
-        const radioField = form.querySelector('input[name="radios"]:checked').value;
-        const checkboxFields = Array.form(form.querySelectorAll('input[type="checkbox"]:checked')).map(cb => cb.value);
-
-        const table = document.querySelector('#responses-table');
-        const row = document.createElement('tr');
-        row.innerHTML = `
-        <td>${textField}</td>
-        <td>${selectField}</td>
-        <td>${radioField}</td>
-        <td>${checkboxFields.join(', ')}</td>
-        `;
-
-        table.appendChild(row);
-        form.reset();
-    
-
-    });
-});
 
 let btn = document.querySelector('button');
 
@@ -55,3 +21,20 @@ btn.addEventListener('click', function () {
     btn.form.firstElementChild.disabled = false;
   }, 4000);
 }, false);
+
+/*const form = document.getElementById("#formID");
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  const textField = document.getElementById("#textfield").value;
+  const selectField = document.getElementById("#selectfield").value;
+  const radioField = document.getElementById("#radiofield").value;
+  const checkField = document.getElementById("#checkfield").value;
+});*/
+
+
+const botaoModal = document.querySelector('#modalTabela');
+botaoModal.addEventListener('click', function(){
+  $('#modalTabela').modal('show')
+});
+
+

@@ -8,7 +8,6 @@
 .container {
     width: 100%;
     height: 100vh;
-    background-color: dimgray;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,47 +25,37 @@ form {
     margin: 8px 0;
     box-sizing: border-box;
     border: 2px solid blue;
-    font-size: 20px;
+    font-size: 15px;
 }
 
-.text-field1{
+.text-field1,
+.select-field1,
+.check,
+.radio-btn {
     font-size: 30px;
-    color:aliceblue;
+    color: aliceblue;
+    margin-bottom: 10px;
 }
 
-.select-field1{
-    font-size: 30px;
-    color:aliceblue;
+.check {
+    margin-top: 10px;
 }
 
-#select-field{
+#select-field {
     border-radius: 6px;
     color: black;
     padding: 12px 20px;
     margin: 8px 0;
 }
-#radio1,
-#radio2,
-#radio3{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.radio-btn{
-    font-size: 30px;
-    color:aliceblue;
-}
 
-#responses-table {
-    display: none;
-}
+
 
 /* This is the submit button styles */
 button {
     display: block;
     margin: 0 auto;
     padding: .6em .8em;
-    font-size: 30px;
+    font-size: 15px;
     font-weight: bold;
     border-radius: .4em;
     border: none;
@@ -74,57 +63,63 @@ button {
     cursor: pointer;
     position: relative;
     transition: all 1s;
-  }
-  
-  /* focus/disabled styles, you can change this for accessibility */
-  button:focus, button:disabled {
+    margin-top: 15px;
+}
+
+/* focus/disabled styles, you can change this for accessibility */
+button:focus, button:disabled {
     outline: none;
     background: #aaa;
-  }
-  
-  /* This is the space for the spinner to appear, applied to the button */
-  .spin {
+}
+
+/* This is the space for the spinner to appear, applied to the button */
+.spin {
     padding-left: 2.5em;
     display: block;
-  }
-  
-  /* position of the spinner when it appears, you might have to change these values */
-  .spin .spinner {
+}
+
+/* position of the spinner when it appears, you might have to change these values */
+.spin .spinner {
     left: -.6em;
     top: .4em;
     width: 2.5em;
     display: block;
     position: absolute;
-  }
-  
-  /* spinner animation */
-  @keyframes spinner {
+}
+
+/* spinner animation */
+@keyframes spinner {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
-    
+
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
-  
-  /* The actual spinner element is a pseudo-element */
-  .spin .spinner::before {
+}
+
+/* The actual spinner element is a pseudo-element */
+.spin .spinner::before {
     content: "";
-    width: 1.5em; /* Size of the spinner */
-    height: 1.5em; /* Change as desired */
+    width: 1.5em;
+    /* Size of the spinner */
+    height: 1.5em;
+    /* Change as desired */
     position: absolute;
     top: 50%;
     left: 50%;
     border-radius: 50%;
-    border: solid .35em rgb(253, 3, 3); /* Thickness/color of spinner track */
-    border-bottom-color: rgb(85, 85, 85); /* Color of variant spinner piece */
-    animation: .8s linear infinite spinner; /* speed of spinner */
+    border: solid .35em rgb(253, 3, 3);
+    /* Thickness/color of spinner track */
+    border-bottom-color: rgb(85, 85, 85);
+    /* Color of variant spinner piece */
+    animation: .8s linear infinite spinner;
+    /* speed of spinner */
     transform: translate(-50%, -50%);
     will-change: transform;
-  }
-  
-  
-  *, *::before, *::after {
+}
+
+
+*, *::before, *::after {
     box-sizing: border-box;
-  }
+}
