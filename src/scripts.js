@@ -22,19 +22,39 @@ btn.addEventListener('click', function () {
   }, 4000);
 }, false);
 
-/*const form = document.getElementById("#formID");
-form.addEventListener("submit", function (event) {
+
+function handleFormSubmit(event) {
   event.preventDefault();
-  const textField = document.getElementById("#textfield").value;
-  const selectField = document.getElementById("#selectfield").value;
-  const radioField = document.getElementById("#radiofield").value;
-  const checkField = document.getElementById("#checkfield").value;
-});*/
+// get form values
+const textField = document.getElementById("textfield").value;
+const selectField = document.getElementById("select-field").value;
+const radioField = document.getElementById("radio-Fields").value;
+const checkField = document.getElementById("check-Field").value;
+}
+// create new table row and cells
+const newRow = document.createElement("tr");
+const textCell = document.createElement("td");
+const selectCell = document.createElement("td");
+const radioCell = document.createElement("td");
+const checkCell = document.createElement("td");
+
+// set text content of cells
+textCell.textContent = text;
+selectCell.selectCell = Option;
+radioCell.selectField = Option;
+checkCell.selectField = Option;
+
+// append cells to row
+newRow.appendChild(textCell);
+newRow.appendChild(selectCell);
+newRow.appendChild(radioCell);
+newRow.appendChild(checkCell);
+
+// append row to table
+const table = document.getElementById("myTable");
+table.appendChild(newRow);
 
 
-const botaoModal = document.querySelector('#modalTabela');
-botaoModal.addEventListener('click', function(){
-  $('#modalTabela').modal('show')
-});
-
-
+const myModal = new bootstrap.Modal(document.getElementById('#modalTabela'), options)
+document.getElementById("#modalTabela").classList.add("show");
+document.getElementById("#modalTabela").classList.remove("show");

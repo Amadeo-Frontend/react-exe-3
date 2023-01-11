@@ -42,7 +42,7 @@ form {
 }
 
 #select-field {
-    border-radius: 6px;
+    border-radius: 6px !important;
     color: black;
     padding: 12px 20px;
     margin: 8px 0;

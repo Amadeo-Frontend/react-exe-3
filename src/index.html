@@ -22,13 +22,14 @@
         <form id="formID">
             <label for="text-field" class="text-field1">Campo de texto:</label>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput textfield" placeholder="Texto">
+                <input type="text" class="form-control" id="floatingInput textfield" placeholder="Texto" required>
                 <label for="floatingInput">Insira o texto</label>
             </div>
             
             
             <label for="select-field" class="select-field1">Caixa de seleção:</label>
-            <select name="select-field" id="select-field">
+            <select name="select-field" id="select-field" required>
+                <option value=""></option>
                 <option value="option1">Opção 1</option>
                 <option value="option2">Opção 2</option>
                 <option value="option3">Opção 3</option>
@@ -36,7 +37,7 @@
             
             <label class="radio-btn">Radio button:</label>
             
-            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group" id="radio-Fields" required>
                 <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
                 <label class="btn btn-outline-primary" for="btnradio1">Opção 1</label>
                 
@@ -49,7 +50,7 @@
             
             <label class="check">Checkbox:</label>
             
-            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group" id="check-Field" required>
                 <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
                 <label class="btn btn-outline-primary" for="btncheck1">Opção 1</label>
                 
@@ -60,56 +61,57 @@
                 <label class="btn btn-outline-primary" for="btncheck3">Opção 3</label>
             </div>
             
-            <button type="button" class="btn btn-primary" id="btn" data-toggle="modal" data-target="#modalTabela">Enviar<span class="spinner"></span></button>
+            <button type="submit" class="btn btn-primary" id="btn" data-toggle="modal" data-target="#modalTabela">Enviar<span class="spinner"></span></button>
             
             
         </form>
         
-        
-        <div class="modal" tabindex="-1" id="modalTabela">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <table id="minhaTabela">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Campo de texto</th>
-                                    <th scope="col">Caixa de seleção</th>
-                                    <th scope="col">Radio button</th>
-                                    <th scope="col">Checkbox</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td colspan="2">Larry the Bird</td>
-                                    <td>@twitter</td>
-                                </tr>
-                            </tbody>
-                            
-                        </table>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
+  <!-- Modal -->
+  <div class="modal fade" id="modalTabela" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Dados do formulário</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <div class="modal-body">
+            <table id="myTable">
+                <thead>
+                    <tr>
+                        <th scope="col">Campo de texto</th>
+                        <th scope="col">Caixa de seleção</th>
+                        <th scope="col">Radio button</th>
+                        <th scope="col">Checkbox</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Campo de texto</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Caixa de seleção</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Radio button</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Checkbox</th>
+                        <td></td>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
         
         
         
